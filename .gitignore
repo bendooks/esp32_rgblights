@@ -1,0 +1,4 @@
+*~
+
+# do not check in private wifi password
+wifipass.h
