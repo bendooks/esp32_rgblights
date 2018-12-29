@@ -211,7 +211,7 @@ void setup() {
   Serial.begin(115200);
   Serial.println("ESP32 RGB String server");
 
-  if (true) {
+  if (false) {
   //WiFi.begin("Hackspace", "T3h4x0rZ");
   //WiFi.begin("bjd-automatic", "notverysecure");
     WiFi.begin(WIFI_NET, WIFI_PASS);
