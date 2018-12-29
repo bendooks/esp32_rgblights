@@ -62,9 +62,6 @@ static void serv_root(void)
   message += "\t<br><input type=\"submit\">\n";
   message += "</form>\n</body></html>\n";
 
-
-
-   
   wwwserv.send(200, "text/html", message);
 }
 
@@ -72,15 +69,6 @@ static void httpserv_refresh_to(String url)
 {
   server.send(200, "text/html", "<html><head><meta http-equiv=\"refresh\" content=\"0; url="  + url +  "\" />" "</head></html><p>Done</p>");  
 }
-
-static void httpserv_handle_setmode(void)
-{
-  String to = server.arg("mode");
-
-  Serial.println("new mode is " + to);
-  httpserv_refresh_to("/");
-}
-
 
 static void httpserv_handle_setoverlay(void)
 {
@@ -213,7 +201,6 @@ void setup() {
 
   if (false) {
   //WiFi.begin("Hackspace", "T3h4x0rZ");
-  //WiFi.begin("bjd-automatic", "notverysecure");
     WiFi.begin(WIFI_NET, WIFI_PASS);
 
   while (WiFi.status() != WL_CONNECTED) {
@@ -233,7 +220,6 @@ void setup() {
   
   wwwserv.on("/", HTTP_GET, serv_root);
   wwwserv.on("/status", httpserv_handle_status);
-  wwwserv.on("/setmode", httpserv_handle_setmode);
   wwwserv.on("/dumplights", httpserv_handle_dumplights);
   wwwserv.on("/lightboard", httpserv_handle_lightboard);
   wwwserv.on("/set_animation", httpserv_handle_setanim);
