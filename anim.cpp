@@ -12,14 +12,14 @@
 #include <NeoPixelBus.h>
 #include "anim.h"
 
-TwinkleAnim::TwinkleAnim(RgbColor *pix, int nr_pix)
+ChaserAnim::ChaserAnim(RgbColor *pix, int nr_pix)
 {
   this->nrpix = nr_pix;
   this->pix = pix;
   this->flpix = 0;
 }
 
-void TwinkleAnim::updateState(void)
+void ChaserAnim::updateState(void)
 {
   int px;
   for (px = 0; px < nrpix; px++) {
@@ -39,7 +39,7 @@ void TwinkleAnim::updateState(void)
     flpix = 0;
 }
 
-TwinkleAnim2::TwinkleAnim2(RgbColor *pix, int nr_pix)
+ChaserAnim2::ChaserAnim2(RgbColor *pix, int nr_pix)
 {
   this->nrpix = nr_pix;
   this->pix = pix;
@@ -49,7 +49,7 @@ TwinkleAnim2::TwinkleAnim2(RgbColor *pix, int nr_pix)
   a_b = f_b = 0;  
 }
 
-void TwinkleAnim2::updateState(void)
+void ChaserAnim2::updateState(void)
 {
   int px;
   for (px = 0; px < nrpix; px++) {
@@ -88,14 +88,14 @@ void TwinkleAnim2::updateState(void)
   }
 }
 
-TwinkleAnimOverlay::TwinkleAnimOverlay(RgbColor *pix, int nr_pix)
+ChaserAnimOverlay::ChaserAnimOverlay(RgbColor *pix, int nr_pix)
 {
   this->nrpix = nr_pix;
   this->pix = pix;
   this->flpix = 0;
 }
 
-void TwinkleAnimOverlay::updateState(void)
+void ChaserAnimOverlay::updateState(void)
 {
   int px;
   for (px = 0; px < nrpix; px++) {

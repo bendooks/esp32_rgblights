@@ -9,13 +9,13 @@ class AnimState {
   virtual String shortName(void);
 };
 
-class TwinkleAnim : public AnimState {
+class ChaserAnim : public AnimState {
   public:
-    TwinkleAnim(RgbColor *pix, int nr_point);
+    ChaserAnim(RgbColor *pix, int nr_point);
     void updateState(void);
 
     String longName() { return "Simple Flashing chaser"; };
-    String shortName() { return "twinkle1"; };
+    String shortName() { return "chaser1"; };
 
   private:
     RgbColor *pix;
@@ -23,13 +23,13 @@ class TwinkleAnim : public AnimState {
     int flpix;
 };
 
-class TwinkleAnim2 : public AnimState {
+class ChaserAnim2 : public AnimState {
   public:
-    TwinkleAnim2(RgbColor *pix, int nr_point);
+    ChaserAnim2(RgbColor *pix, int nr_point);
     void updateState(void);
 
     String longName() { return "Simple Flashing chaser (RGB)"; };
-    String shortName() { return "twinkle2"; };
+    String shortName() { return "chaser2"; };
 
   private:
     RgbColor *pix;
@@ -50,13 +50,13 @@ class NoAnim : public AnimState {
     String shortName() { return "none"; };
 };
 
-class TwinkleAnimOverlay : public AnimState {
+class ChaserAnimOverlay : public AnimState {
   public:
-    TwinkleAnimOverlay(RgbColor *pix, int nr_point);
+    ChaserAnimOverlay(RgbColor *pix, int nr_point);
     void updateState(void);
 
-    String longName() { return "Twinkle"; };
-    String shortName() { return "twinkle"; };
+    String longName() { return "Chaser"; };
+    String shortName() { return "chaser"; };
 
   private:
     RgbColor *pix;

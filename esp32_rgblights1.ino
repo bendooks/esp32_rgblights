@@ -250,10 +250,10 @@ void setup() {
   }
 
   // set the default animation and add it to the list
-  state = new TwinkleAnim(col, PixelCount);
+  state = new ChaserAnim(col, PixelCount);
   anims.push_back(state);
 
-  anims.push_back(new TwinkleAnim2(col, PixelCount));
+  anims.push_back(new ChaserAnim2(col, PixelCount));
 
   // push some simple sinewave animations
   anims.push_back(new SineWaveAnim(col, PixelCount, "sinered", "Sinewave Red", 255, 0, 0));
@@ -267,7 +267,7 @@ void setup() {
 
   state_ov = new NoAnim(col, PixelCount);
   anims_ov.push_back(state_ov);
-  anims_ov.push_back(new TwinkleAnimOverlay(col, PixelCount));
+  anims_ov.push_back(new ChaserAnimOverlay(col, PixelCount));
 
   int i;
   for (i = 0; i  < PixelCount; i++) {
